@@ -1,0 +1,39 @@
+.menu{
+
+	width: 3em;
+	aspect-ratio: 1/1;
+	background: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: none;
+	z-index: 100;
+	position: relative;
+
+
+	img{
+		width: 100%;
+		position: absolute;
+		transition: 0.2s;
+	}
+
+	&[data-active='true'] {
+		[data-name="menu"]{
+			opacity: 0;
+			scale: 0;
+		}
+
+		[data-name="cross"]{
+			opacity: 1;
+			scale: 1;
+		}
+	}
+
+
+	[data-name="cross"]{
+		padding: 0.6em;
+		opacity: 0;
+		scale: 0;
+		transition-duration: 0.4s;
+	}
+}

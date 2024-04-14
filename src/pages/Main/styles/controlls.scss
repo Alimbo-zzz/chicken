@@ -1,0 +1,28 @@
+
+
+
+.controlls{
+
+	.container{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: 1em;
+	}
+
+
+	&__select{
+		font-size: 14px;
+		background-color: color("3");
+		color: #fff;
+		padding: 0.3em 0.8em;
+		border-radius: 0.2em;
+		box-shadow: 0.1em 0.1em 0.4em rgba($color: #000000, $alpha: 0.2);
+
+		@include active-anim;
+	}
+
+	&__date{
+		font-size: 14px;
+	}
+}

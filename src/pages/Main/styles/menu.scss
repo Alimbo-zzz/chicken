@@ -1,0 +1,61 @@
+$menuBg: color('4');
+$textColor: #fff;
+$itemBg: color('3');
+
+.menu{
+	position: fixed;
+	right: 0; top: 0;
+	width: 260px; height: 100vh; 
+	background-color: $menuBg;
+	z-index: 20;
+	color: $textColor;
+	box-shadow: -0.2em 0 0.5em rgba($color: #000000, $alpha: 0.3);
+	padding: 1.2em 0.8em;
+	display: flex;
+	flex-direction: column;
+	gap: 3em;
+	transition: 0.2s;
+	// dis
+	translate: 105% 0;
+	pointer-events: none;
+	user-select: none;
+	opacity: 0;
+
+	&[data-open="true"]{
+		translate: 0 0;
+		pointer-events: auto;
+		user-select: auto;
+		opacity: 1;
+	}
+
+
+	&__title{
+		font-size: 20px;
+		font-weight: 500;
+		color: $textColor;
+	}
+
+	&__list{
+		display: flex;
+		flex-direction: column;
+		gap: 0.6em;
+	}
+
+	&__item{
+		font-size: 20px;
+		color: $textColor;
+		background-color: $itemBg;
+		padding: 0.4em;
+		text-align: center;
+		border-radius: 0.2em;
+		box-shadow: 0.1em 0.1em 0.4em rgba($color: #000000, $alpha: 0.2);
+		@include active-anim;
+
+		&[data-active="true"]{
+			pointer-events: none;
+			background-color: $textColor;
+			color: $menuBg;
+		}
+	
+	}
+}

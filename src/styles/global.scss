@@ -1,0 +1,52 @@
+@use "sass:map";
+// ------------ vars ------------
+
+$max-width: 1440px;
+$desktop: 1280px;
+$laptop: 1024px;
+$tablet: 768px;
+$phone: 480px;
+$min-width: 360px;
+
+
+@function color($name){
+	$colors: (
+		"white": #fff,
+		"black": #444,
+		"danger": #F88990,
+		"success": #98E2AD,
+		"1": #E5E3E4,
+		"2": #BBC6C8,
+		"3": #5BA199,
+		"4": #469597,
+	);
+
+	@return map.get($colors, $name);
+} 
+
+
+@function gradient($name){
+	$gradients: (
+		"1": linear-gradient(to top, #469597, #5BA199),
+	);
+
+	@return map.get($gradients, $name);
+} 
+
+
+// ----------- mixins ----------
+
+@mixin hover {
+	&:not([disabled]):hover {	@content;}
+}
+
+@mixin square($size, $radius: 0) {
+	width: $size; min-width: $size; max-width: $size;
+	height: $size; min-height: $size; max-height: $size;
+	border-radius: $radius;
+}
+
+
+@mixin active-anim($all: 0.2s){
+	transition: scale 0.15s, all $all;	&:active{ scale: 0.9; }
+}

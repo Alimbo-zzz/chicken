@@ -1,0 +1,14 @@
+@import './header.scss';
+@import './menu.scss';
+@import './table.scss';
+@import './controlls.scss';
+
+
+
+.main{
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
+	height: 100%;
+	background-color: color('1');
+}
