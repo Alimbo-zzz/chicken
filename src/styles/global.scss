@@ -11,14 +11,10 @@ $min-width: 360px;
 
 @function color($name){
 	$colors: (
-		"white": #fff,
-		"black": #444,
-		"danger": #F88990,
-		"success": #98E2AD,
-		"1": #E5E3E4,
-		"2": #BBC6C8,
-		"3": #5BA199,
-		"4": #469597,
+		"1": #FFFFFF,
+		"2": #2E5262,
+		"3": #80BA57,
+		"4": #C34950,
 	);
 
 	@return map.get($colors, $name);

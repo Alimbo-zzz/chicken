@@ -1,12 +1,9 @@
-import Header from './Header';
-import Menu from './Menu';
-import Table from './Table';
-import Controlls from './Controlls';
+import Content from "./Content";
+import Intro from "./Intro";
+
 
 
 export {
-	Header,
-	Menu, 
-	Table,
-	Controlls,
+	Content, 
+	Intro,
 }

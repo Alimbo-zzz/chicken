@@ -1,0 +1,24 @@
+
+.header{
+	padding: 0.5em 0;
+	.container{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+
+	&__season{
+		font-size: 20px;
+		padding: 0.2em;
+		text-align: center;
+		width: 180px;
+		border-radius: 0.2em;
+		background-color: color('3');
+		color: color('1');
+		border: none;
+		box-shadow: 0.2em 0.2em 0.5em rgba($color: #000000, $alpha: 0.2);
+		
+		@include active-anim;
+	}
+}

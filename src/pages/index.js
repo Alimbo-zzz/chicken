@@ -1,6 +1,8 @@
+import Table from './Table';
 import Main from './Main';
 
 
 export {
-	Main
+	Table,
+	Main,
 }

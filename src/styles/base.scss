@@ -22,6 +22,8 @@ body {
 	line-height: 1.5;
 	font-size: 16px;
 	overflow-x: hidden;
+	background-color: color('2');
+	color: color('1');
 }
 
 *,
@@ -82,8 +84,8 @@ img {
 }
 
 ::selection {
-	color: #fff;
-	background: #7B45FA;
+	color: color('1');
+	background: color('3');
 }
 
 // УБРАТЬ ЦВЕТ АВТОЗАПОЛНЕНИЯ INPUT

@@ -1,0 +1,15 @@
+@import './header.scss';
+@import './menu.scss';
+@import './table.scss';
+@import './season.scss';
+
+
+
+.table-page{
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
+	height: 100vh;
+	overflow: hidden;
+	background-color: color('2');
+}

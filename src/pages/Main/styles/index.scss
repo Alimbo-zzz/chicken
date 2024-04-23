@@ -1,14 +1,21 @@
-@import './header.scss';
-@import './menu.scss';
-@import './table.scss';
-@import './controlls.scss';
+@import './intro.scss';
+@import './content.scss';
+
 
 
 
 .main{
 	display: flex;
 	flex-direction: column;
-	gap: 1em;
-	height: 100%;
-	background-color: color('1');
+	overflow-x: hidden;
+	overflow-y: auto;
+	height: 100vh;
+	scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+
+
+.main__section{
+	scroll-snap-align: start;
+	min-height: 100vh;
 }

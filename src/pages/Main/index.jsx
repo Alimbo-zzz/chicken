@@ -1,22 +1,26 @@
-import React, {useState} from 'react';
-import {Header, Menu, Table, Controlls} from './components';
+import React, {useState, useEffect, useRef} from 'react';
+import {Content, Intro} from './components';
 import './styles/index.scss';
+import {Animate} from '@/contexts';
+
 
 const Main = (props) => {
-	const [menuIsOpen, setMenuIsOpen] = useState(false);
+	const mainRef = useRef();
 
-	let menuOps = {
-		menuIsOpen, setMenuIsOpen
+	const scrollContent = () => {		
+		mainRef.current.scrollTo({
+			top: mainRef.current.scrollHeight,
+			behavior: "smooth",
+		});
 	}
-
 	
 	return (<>
-		<div className='main'>
-			<Header {...menuOps}/>
-			<Controlls/>
-			<Table/>
-		</div>
-		<Menu {...menuOps}/>
+		<Animate>
+			<div ref={mainRef} className='main'>
+				<div className="main__section"><Intro scroll={scrollContent}/></div>
+				<div className="main__section"><Content/></div>
+			</div>
+		</Animate>		
 	</>);
 }
 

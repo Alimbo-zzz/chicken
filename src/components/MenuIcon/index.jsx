@@ -1,14 +1,14 @@
 import React from 'react';
 import cls from './style.module.scss';
-import cross_svg from './cross.svg';
-import menu_svg from './menu.svg';
 
-const MenuIcon = ({open, ...props}) => {
+
+const MenuIcon = ({dice=1, ...props}) => {
+
+	const diceValid = Number(dice) >= 1 &&  Number(dice) <= 6 ? dice : 1;
 	
 	return (<>
-		<button {...props} data-active={open} className={cls.menu}>
-			<img data-name="cross" src={cross_svg} />
-			<img data-name="menu" src={menu_svg} />
+		<button {...props} className={cls.menu}>
+			<img src={`./icons/d${diceValid}.svg`} />
 		</button>
 	</>);
 }
