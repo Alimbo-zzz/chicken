@@ -9,7 +9,7 @@
 	flex-direction: column;
 	overflow-x: hidden;
 	overflow-y: auto;
-	height: 100vh;
+	height: 100dvh;
 	scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
 }
@@ -17,5 +17,9 @@
 
 .main__section{
 	scroll-snap-align: start;
-	min-height: 100vh;
+	min-height: 100dvh;
+
+	&:last-child{
+		scroll-snap-align: end;
+	}
 }
